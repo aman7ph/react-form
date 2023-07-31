@@ -1,8 +1,17 @@
 import React from 'react';
 import './style.css';
 import FormInput from './componet/FormInput';
+import { Trans, useTranslation } from 'react-i18next';
 
 export default function App() {
+  //language
+  const { t, i18n } = useTranslation();
+  React.useEffect(() => {
+    const lng = navigator.language;
+    i18n.changeLanguage(lng);
+  }, []);
+  const lng = navigator.language;
+  //language
   const [values, setValues] = React.useState({
     username: '',
     email: '',
