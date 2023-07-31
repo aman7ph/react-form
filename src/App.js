@@ -24,28 +24,28 @@ export default function App() {
       name: 'email',
       type: 'email',
       placeholder: 'email',
-      lable: 'email',
+      lable: 'Email',
     },
     {
       id: 3,
       name: 'birthay',
       type: 'text',
-      placeholder: 'Birthay',
-      lable: 'Birthay',
+      placeholder: 'Birthday',
+      lable: 'Birthday',
     },
     {
       id: 4,
       name: 'password',
       type: 'password',
       placeholder: 'password',
-      lable: 'password',
+      lable: 'Password',
     },
     {
       id: 5,
       name: 'confirmPassword',
       type: 'password',
       placeholder: 'confirm Password',
-      lable: 'confirm Password',
+      lable: 'Confirm Password',
     },
   ];
 
@@ -53,18 +53,19 @@ export default function App() {
     e.preventDefault();
   };
 
-  const onChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
+  const onChange = (event) => {
+    setValues({ ...values, [event.target.name]: event.target.value });
   };
 
   return (
     <div className="app">
       <form onSubmit={handleSubmit}>
+        <h1>Register</h1>
         {Inputs.map((input) => (
           <FormInput
             key={input.id}
             {...input}
-            value={values[input.name]}
+            values={values[input.name]}
             onChange={onChange}
           />
         ))}

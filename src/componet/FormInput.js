@@ -1,9 +1,11 @@
 import React from 'react';
 import './forminput.css';
 const FormInput = (props) => {
+  const { id, lable, onChange, ...inputProps } = props;
   return (
     <div className="formInput">
-      <input name={props.name} placeholder ={props.placeholder } />
+      <label htmlFor="">{lable}</label>
+      <input {...inputProps} onChange={onChange} />
     </div>
   );
 };
