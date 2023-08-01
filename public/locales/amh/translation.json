@@ -1,0 +1,49 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "username",
+      "type": "text",
+      "placeholder": "username",
+      "lable": "username"
+    },
+    {
+      "id": 2,
+      "name": "email",
+      "type": "email",
+      "placeholder": "email",
+      "lable": "Email"
+    },
+    {
+      "id": 3,
+      "name": "birthday",
+      "type": "txt",
+      "placeholder": "Birthday",
+      "lable": "Birthday"
+    },
+    {
+      "id": 4,
+      "name": "password",
+      "type": "password",
+      "placeholder": "password",
+      "lable": "Password"
+    },
+    {
+      "id": 5,
+      "name": "cpassword",
+      "type": "password",
+      "placeholder": "Confirm Password",
+      "lable": "Confirm Password"
+    }
+  ],
+  "register": [
+    {
+      "register": "Register"
+    }
+  ],
+  "submit": [
+    {
+      "submit": "Submit"
+    }
+  ]
+}
