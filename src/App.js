@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { Suspense, useEffect } from 'react';
 import './style.css';
 import FormInput from './componet/FormInput';
+import LangSelector from './componet/LangSelector';
 import { Trans, useTranslation } from 'react-i18next';
 
-export default function App() {
+function App() {
   //language
   const { t, i18n } = useTranslation();
-  React.useEffect(() => {
-    const lng = navigator.language;
-    i18n.changeLanguage(lng);
+  const data = t(`data`);
+
+  useEffect(() => {
+    const lang = localStorage.getItem('language');
+    i18n.changeLanguage(lang);
   }, []);
-  const lng = navigator.language;
+
+  const setLang = (datas) => {
+    localStorage.setItem('language', datas);
+    window.location.reload();
+  };
   //language
+
   const [values, setValues] = React.useState({
     username: '',
     email: '',
@@ -19,45 +27,6 @@ export default function App() {
     password: '',
     confirmPassword: '',
   });
-
-  const Inputs = [
-    {
-      id: 1,
-      name: 'username',
-      type: 'text',
-      placeholder: 'username',
-      lable: 'username',
-    },
-    {
-      id: 2,
-      name: 'email',
-      type: 'email',
-      placeholder: 'email',
-      lable: 'Email',
-    },
-    {
-      id: 3,
-      name: 'birthay',
-      type: 'text',
-      placeholder: 'Birthday',
-      lable: 'Birthday',
-    },
-    {
-      id: 4,
-      name: 'password',
-      type: 'password',
-      placeholder: 'password',
-      lable: 'Password',
-    },
-    {
-      id: 5,
-      name: 'confirmPassword',
-      type: 'password',
-      placeholder: 'confirm Password',
-      lable: 'Confirm Password',
-    },
-  ];
-
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -70,7 +39,7 @@ export default function App() {
     <div className="app">
       <form onSubmit={handleSubmit}>
         <h1>Register</h1>
-        {Inputs.map((input) => (
+        {data.map((input) => (
           <FormInput
             key={input.id}
             {...input}
@@ -82,5 +51,13 @@ export default function App() {
         <button>Submit</button>
       </form>
     </div>
+  );
+}
+
+export default function WrappedApp() {
+  return (
+    <Suspense fallback="...loading">
+      <App />
+    </Suspense>
   );
 }
