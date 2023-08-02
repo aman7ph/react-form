@@ -7,8 +7,10 @@ import { Trans, useTranslation } from 'react-i18next';
 function App() {
   //language
   const { t, i18n } = useTranslation();
-  const data = t(`data`);
-
+  const form_txt = t(`data`);
+  const regi_txt = t(`register`);
+  const subm_txt = t(`submit`);
+  console.log(regi_txt);
   useEffect(() => {
     const lang = localStorage.getItem('language');
     i18n.changeLanguage(lang);
@@ -38,8 +40,9 @@ function App() {
   return (
     <div className="app">
       <form onSubmit={handleSubmit}>
-        <h1>Register</h1>
-        {data.map((input) => (
+        <LangSelector setLang={setLang} />
+        <h1>{regi_txt[0].register}</h1>
+        {form_txt.map((input) => (
           <FormInput
             key={input.id}
             {...input}
@@ -48,7 +51,7 @@ function App() {
           />
         ))}
 
-        <button>Submit</button>
+        <button>{subm_txt[0].submit}</button>
       </form>
     </div>
   );

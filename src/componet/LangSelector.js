@@ -3,7 +3,7 @@ import './forminput.css';
 export default function LangSelector(props) {
   return (
     <select name="" id="" onChange={(e) => props.setLang(e.target.value)}>
-      <option key={''}>Languages</option>
+      <option key={''}>Lng</option>
       <option key={'en'} value="en">
         English
       </option>
