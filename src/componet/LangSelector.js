@@ -2,7 +2,7 @@ import React from 'react';
 import './forminput.css';
 export default function LangSelector(props) {
   return (
-    <select name="" id="" onChange={(e) => props.setLang(e.target.value)}>
+    <select className="dmenu" name="" id="" onChange={(e) => props.setLang(e.target.value)}>
       <option key={''}>Lng</option>
       <option key={'en'} value="en">
         English
