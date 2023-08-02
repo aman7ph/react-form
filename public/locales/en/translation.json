@@ -5,45 +5,46 @@
       "name": "username",
       "type": "text",
       "placeholder": "username",
-      "lable": "username"
+      "label": "username"
     },
     {
       "id": 2,
       "name": "email",
       "type": "email",
       "placeholder": "email",
-      "lable": "Email"
+      "label": "Email"
     },
     {
       "id": 3,
       "name": "birthday",
       "type": "txt",
       "placeholder": "Birthday",
-      "lable": "Birthday"
+      "label": "Birthday"
     },
     {
       "id": 4,
       "name": "password",
       "type": "password",
       "placeholder": "password",
-      "lable": "Password"
+      "label": "Password"
     },
     {
       "id": 5,
       "name": "cpassword",
       "type": "password",
       "placeholder": "Confirm Password",
-      "lable": "Confirm Password"
+      "label": "Confirm Password"
     }
   ],
+
   "register": [
     {
-      "register": "Register"
+      "register": "register"
     }
   ],
   "submit": [
     {
-      "submit": "Submit"
+      "submit": "submit"
     }
   ]
 }
