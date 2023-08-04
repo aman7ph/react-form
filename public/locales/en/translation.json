@@ -6,7 +6,9 @@
       "type": "text",
       "placeholder": "username",
       "errorMessage": "username should be 13-16 characters and shouldn't include any special charactere!",
-      "label": "username"
+      "label": "username",
+      "required": true,
+      "pattern": "^[A-Za-z0-9]{3,16}$"
     },
     {
       "id": 2,
