@@ -5,6 +5,7 @@
       "name": "username",
       "type": "text",
       "placeholder": "username",
+      "errorMessage": "username should be 13-16 characters and shouldn't include any special charactere!",
       "label": "username"
     },
     {
@@ -12,6 +13,7 @@
       "name": "email",
       "type": "email",
       "placeholder": "email",
+      "errorMessage": "it should be a valid email address",
       "label": "Email"
     },
     {
@@ -26,6 +28,7 @@
       "name": "password",
       "type": "password",
       "placeholder": "password",
+      "errorMessage": "password should be 8-20 characteres and include at least 1 letter 1 number and 1 special character",
       "label": "Password"
     },
     {
@@ -33,6 +36,7 @@
       "name": "cpassword",
       "type": "password",
       "placeholder": "Confirm Password",
+      "errorMessage": "Password dose't match",
       "label": "Confirm Password"
     }
   ],

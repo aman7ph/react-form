@@ -5,6 +5,7 @@
       "name": "username",
       "type": "text",
       "placeholder": "የተጠቃሚ ስም",
+      "errorMessage": "የተጠቃሚ ስም 13-16 ፊዳል መሆን አለበት እና ምንም ልዩ ምልክት ማካተት የለበትም!!",
       "label": "የተጠቃሚ ስም"
     },
     {
@@ -12,6 +13,7 @@
       "name": "email",
       "type": "email",
       "placeholder": "ኢሜይል",
+      "errorMessage": "ትክክለኛ የኢሜይል አድራሻ መሆን አለበት",
       "label": "ኢሜይል"
     },
     {
@@ -26,6 +28,7 @@
       "name": "password",
       "type": "password",
       "placeholder": "የይለፍ ቃል",
+      "errorMessage": "የይለፍ ቃል 8-20 ቁምፊዎች መሆን አለበት እና ቢያንስ 1 ፊደል 1 ቁጥር እና 1 ልዩ ቁምፊ ማካተት አለበት!",
       "label": "የይለፍ ቃል"
     },
     {
@@ -33,6 +36,7 @@
       "name": "cpassword",
       "type": "password",
       "placeholder": "የይለፍ ቃል አረጋግጥ",
+      "errorMessage": "የይለፍ ቃል አይዛመድም",
       "label": "የይለፍ ቃል አረጋግጥ"
     }
   ],

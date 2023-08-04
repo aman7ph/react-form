@@ -17,3 +17,8 @@ label {
 .dmenu {
   position: absolute;
 }
+span {
+  font-size: 12px;
+  padding: 3px;
+  color: red;
+}
