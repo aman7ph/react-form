@@ -5,7 +5,7 @@
       "name": "username",
       "type": "text",
       "placeholder": "username",
-      "errorMessage": "username should be 13-16 characters and shouldn't include any special charactere!",
+      "errorMessage": "username should be 3-16 characters and shouldn't include any special charactere!",
       "label": "username",
       "required": true,
       "pattern": "^[A-Za-z0-9]{3,16}$"
@@ -16,7 +16,8 @@
       "type": "email",
       "placeholder": "email",
       "errorMessage": "it should be a valid email address",
-      "label": "Email"
+      "label": "Email",
+      "required": true
     },
     {
       "id": 3,
@@ -28,18 +29,22 @@
     {
       "id": 4,
       "name": "password",
-      "type": "password",
+      "type": "text",
       "placeholder": "password",
-      "errorMessage": "password should be 8-20 characteres and include at least 1 letter 1 number and 1 special character",
-      "label": "Password"
+      "errorMessage": "password should be 8-20 characteres and include at least 1 uper case letter 1 lower case letter 1 number and 1 special character",
+      "label": "Password",
+      "required": true,
+      "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+]).{8,20}$"
     },
     {
       "id": 5,
       "name": "cpassword",
-      "type": "password",
+      "type": "text",
       "placeholder": "Confirm Password",
       "errorMessage": "Password dose't match",
-      "label": "Confirm Password"
+      "label": "Confirm Password",
+      "pattern": "values.password",
+      "required": true
     }
   ],
 
