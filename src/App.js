@@ -30,6 +30,10 @@ function App() {
   });
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (values.password !== values.confirmPassword) {
+      alert("Passwords don't match");
+      return;
+    }
   };
 
   const onChange = (event) => {

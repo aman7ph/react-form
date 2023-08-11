@@ -42,7 +42,6 @@
       "name": "confirmPassword",
       "type": "text",
       "placeholder": "Confirm Password",
-
       "label": "Confirm Password",
       "pattern": "values.password",
       "required": true
