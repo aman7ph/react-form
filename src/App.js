@@ -10,7 +10,6 @@ function App() {
   const form_txt = t(`data`);
   const regi_txt = t(`register`);
   const subm_txt = t(`submit`);
-  console.log(regi_txt);
   useEffect(() => {
     const lang = localStorage.getItem('language');
     i18n.changeLanguage(lang);
@@ -31,10 +30,6 @@ function App() {
   });
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (values.password !== values.confirmPassword) {
-      alert("Passwords don't match");
-      return;
-    }
   };
 
   const onChange = (event) => {
