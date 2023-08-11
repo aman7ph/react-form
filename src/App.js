@@ -31,6 +31,10 @@ function App() {
   });
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (values.password !== values.confirmPassword) {
+      alert("Passwords don't match");
+      return;
+    }
   };
 
   const onChange = (event) => {
@@ -46,7 +50,7 @@ function App() {
           <FormInput
             key={input.id}
             {...input}
-            values={values[input.name]}
+            value={values[input.name]}
             onChange={onChange}
           />
         ))}

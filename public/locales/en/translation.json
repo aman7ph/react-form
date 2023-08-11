@@ -29,22 +29,22 @@
     {
       "id": 4,
       "name": "password",
-      "type": "password",
+      "type": "text",
       "placeholder": "Enter your password",
-      "errorMessage": "Password should be 8-20 characters and include at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character.",
+      "errorMessage": "Password should be 8-20 characters and include at least 1 letter, 1 number, and 1 special character.",
       "label": "Password",
       "required": true,
-      "pattern": "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+]).{8,20}$"
+      "pattern": "^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$"
     },
 
     {
       "id": 5,
-      "name": "cpassword",
+      "name": "confirmPassword",
       "type": "text",
       "placeholder": "Confirm Password",
-      "errorMessage": "Password dose't match",
+
       "label": "Confirm Password",
-      "pattern": "values.password",
+
       "required": true
     }
   ],
