@@ -31,6 +31,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (values.password !== values.confirmPassword) {
+      
       alert("Passwords don't match");
       return;
     }
@@ -42,8 +43,9 @@ function App() {
 
   return (
     <div className="app">
+      <LangSelector setLang={setLang} />
       <form onSubmit={handleSubmit}>
-        <LangSelector setLang={setLang} />
+        
         <h1>{regi_txt[0].register}</h1>
         {form_txt.map((input) => (
           <FormInput

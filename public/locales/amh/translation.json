@@ -19,7 +19,7 @@
     {
       "id": 3,
       "name": "birthday",
-      "type": "txt",
+      "type": "date",
       "placeholder": "የልደት ቀን",
       "label": "የልደት ቀን"
     },
